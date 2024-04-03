@@ -59,7 +59,8 @@ function validateTweet(textarea) {
 2. Whenever a user types into it validate it using the previous function
 */
 function validateTweetOnInput() {
-  // your code here
+  var textarea = document.getElementById("tweet");
+  textarea.addEventListener('input', () => validateTweet(textarea));
 }
 
 /* CHALLENGE 4
