@@ -26,7 +26,17 @@ e.g. generateList(["hello", "world"]) -> <ul>
                                           </ul>
 */
 function generateList(array) {
-  // your code here
+  var existeLista = document.getElementById("generate-list").parentElement.lastElementChild.tagName;
+  var newlist = document.createElement("ul");
+  if(existeLista != "UL"){
+  array.forEach(element => {
+    var newitem = document.createElement("li");
+    var newContent = document.createTextNode(element);
+    newitem.appendChild(newContent);
+    newlist.appendChild(newitem);
+    });
+  }
+  return newlist;
 }
 
 /* CHALLENGE 3a
