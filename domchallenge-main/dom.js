@@ -45,7 +45,13 @@ function generateList(array) {
 3. If it contains > 140 characters set the `aria-invalid="true"` attribute
 */
 function validateTweet(textarea) {
-  // your code here
+  var texto = textarea.value.length;
+  if(texto > 140){
+    textarea.setAttribute("aria-invalid", "true");
+  }
+  else{
+    textarea.setAttribute("aria-invalid", "false");
+  }
 }
 
 /* CHALLENGE 3b
