@@ -70,5 +70,16 @@ e.g. <button class="toggle-button">Toggle</button>
      <p>This should appear/disappear when the button is clicked</p>
 */
 function setupToggleButtons() {
-  // your code here
+  var botones = document.querySelectorAll(".toggle-button");
+  botones.forEach (element => {
+    element.addEventListener("click", () => {
+      hermano = element.nextElementSibling;
+      if(hermano.style.display == "block"){
+        hermano.style.display = 'none';
+      }
+      else{
+        hermano.style.display = 'block';
+      }
+    });
+  });
 }
