@@ -5,6 +5,7 @@ const userspage = async () => {
     // recupero un json de la red
     const users: User[] = await response.json();
 
+    //Creo una interface para saber el tipo de datos que tiene el usuario
     interface User {
         id: number;
         name: string;
@@ -12,7 +13,8 @@ const userspage = async () => {
 
     return (
         <div>
-            <h1>UsersPage</h1>
+            <div>UsersPage</div>
+            <p> {new Date().toLocaleTimeString()}</p>
             <ul>
                 {users.map((user) => (
                     <li key={user.id} > {user.name}</li>
